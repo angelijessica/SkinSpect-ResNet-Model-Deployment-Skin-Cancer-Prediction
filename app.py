@@ -55,7 +55,7 @@ p, li {
 # CONFIG
 # ======================
 IMG_SIZE = 224
-THRESHOLD = 0.69   # ⚠️ GANTI kalau kamu punya best_thresh dari training
+THRESHOLD = 0.99   # ⚠️ GANTI kalau kamu punya best_thresh dari training
 
 st.set_page_config(
     page_title="Skin Cancer Detector",
@@ -183,6 +183,7 @@ st.markdown("""
 It does not replace professional medical diagnosis or advice.
 </p>
 """, unsafe_allow_html=True)
+
 
 
 
