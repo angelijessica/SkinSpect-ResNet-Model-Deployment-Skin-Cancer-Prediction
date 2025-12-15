@@ -140,10 +140,6 @@ if uploaded_file:
     st.markdown("""
     <div class="section-card">
         <h3>🔍 Prediction Result</h3>
-        <p>
-            <b>Confidence score</b> represents how confident the model is in its prediction,
-            based on patterns learned from medical image data.
-        </p>
     </div>
     """, unsafe_allow_html=True)
 
@@ -176,6 +172,7 @@ st.markdown("""
 It does not replace professional medical diagnosis or advice.
 </p>
 """, unsafe_allow_html=True)
+
 
 
 
