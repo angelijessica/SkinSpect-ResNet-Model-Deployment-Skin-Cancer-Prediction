@@ -4,6 +4,9 @@ import tensorflow as tf
 from PIL import Image
 from tensorflow.keras.applications.resnet50 import preprocess_input
 
+MODEL_PATH = "resnet_95_fold_3.keras"
+GDRIVE_ID = "1AbCDeFGhIJkLmNoP"
+
 # ======================
 # CUSTOM CSS
 # ======================
@@ -75,10 +78,14 @@ st.markdown("""
 # ======================
 @st.cache_resource
 def load_model():
-    return tf.keras.models.load_model(
-        "resnet_95_fold_3.keras",
-        compile=False
-    )
+    if not os.path.exists(MODEL_PATH):
+        with st.spinner("Downloading model..."):
+            gdown.download(
+                f"https://drive.google.com/uc?id={GDRIVE_ID}",
+                MODEL_PATH,
+                quiet=False
+            )
+    return tf.keras.models.load_model(MODEL_PATH)
 
 model = load_model()
 
@@ -174,3 +181,4 @@ st.markdown("""
 It does not replace professional medical diagnosis or advice.
 </p>
 """, unsafe_allow_html=True)
+
