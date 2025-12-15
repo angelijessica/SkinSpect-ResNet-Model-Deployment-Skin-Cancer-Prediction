@@ -147,13 +147,6 @@ if uploaded_file:
     </div>
     """, unsafe_allow_html=True)
 
-    st.markdown(f"""
-    <div class="result-box">
-        <p><b>Benign probability:</b> {p_benign:.3f}</p>
-        <p><b>Malignant probability:</b> {p_malignant:.3f}</p>
-    </div>
-    """, unsafe_allow_html=True)
-
     if p_malignant >= THRESHOLD:
         st.error("""
         ⚠️ **Malignant (Potentially Cancerous)**
@@ -183,6 +176,7 @@ st.markdown("""
 It does not replace professional medical diagnosis or advice.
 </p>
 """, unsafe_allow_html=True)
+
 
 
 
