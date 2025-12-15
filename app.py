@@ -7,7 +7,7 @@ import os
 import gdown
 
 MODEL_PATH = "resnet_95_fold_3.keras"
-GDRIVE_ID = "1AbCDeFGhIJkLmNoP"
+GDRIVE_ID = "1e2Ka1hBVegMwFZH2-Xf1nyBkC5IA4yDg"
 
 # ======================
 # CUSTOM CSS
@@ -183,5 +183,6 @@ st.markdown("""
 It does not replace professional medical diagnosis or advice.
 </p>
 """, unsafe_allow_html=True)
+
 
 
