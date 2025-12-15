@@ -3,6 +3,8 @@ import numpy as np
 import tensorflow as tf
 from PIL import Image
 from tensorflow.keras.applications.resnet50 import preprocess_input
+import os
+import gdown
 
 MODEL_PATH = "resnet_95_fold_3.keras"
 GDRIVE_ID = "1AbCDeFGhIJkLmNoP"
@@ -181,4 +183,5 @@ st.markdown("""
 It does not replace professional medical diagnosis or advice.
 </p>
 """, unsafe_allow_html=True)
+
 
